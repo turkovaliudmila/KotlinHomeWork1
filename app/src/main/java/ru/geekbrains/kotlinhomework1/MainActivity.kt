@@ -12,9 +12,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val newCat = Cat("Barsik", 3, "white")
+
+        val textView = findViewById<TextView>(R.id.text1)
+
         val button1 = findViewById<Button>(R.id.button1)
         button1?.setOnClickListener() {
-
+            textView.setText("Name: ${newCat.name} Age: ${newCat.age}")
         }
     }
 }
