@@ -6,6 +6,8 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import org.w3c.dom.Text
+import java.sql.DriverManager.println
+import java.time.DayOfWeek
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,5 +22,12 @@ class MainActivity : AppCompatActivity() {
         button1?.setOnClickListener() {
             textView.setText("Name: ${newCat.name} Age: ${newCat.age}")
         }
+
+        printDaysOfWeek()
+
     }
+}
+
+fun printDaysOfWeek() {
+    for (day in WeekDay.values()) println(day.value)
 }
